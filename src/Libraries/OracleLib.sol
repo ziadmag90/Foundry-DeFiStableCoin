@@ -30,12 +30,12 @@ library OracleLib {
     }
 
     // Getter Function
-    function getPrice(AggregatorV3Interface chainlinkFeed ) external view returns(uint256){
+    function getPrice(AggregatorV3Interface chainlinkFeed) external view returns (uint256) {
         (, int256 price,,,) = stalePriceChecks(chainlinkFeed);
-        return uint256(price) ;
-    } 
+        return uint256(price);
+    }
 
-    function getTimeout() external pure returns(uint256){
-        return TIMEOUT ;
+    function getTimeout() external pure returns (uint256) {
+        return TIMEOUT;
     }
 }
